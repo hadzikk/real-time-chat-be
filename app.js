@@ -5,7 +5,9 @@ const mongodbConnect = require('./src/lib/mongo')
 const authRoutes = require('./src/routes/auth.route')
 const userRoute = require('./src/routes/user.route')
 const messageRoute = require('./src/routes/message.route')
+const config = require('./src/config')
 
+const ORIGIN = config.origin
 const app = express()
 
 mongodbConnect()
@@ -14,7 +16,7 @@ app.use(express.json({ limit: '10mb' }))
 app.use(express.urlencoded({ limit: '10mb', extended: true }))
 app.use(cookieParser())
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: config.ORIGIN,
     credentials: true,
 }))
 
