@@ -1,0 +1,10 @@
+{
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://real-time-chat-fe.hadzikk.workers.dev" }
+      ]
+    }
+  ]
+}
