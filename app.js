@@ -10,7 +10,7 @@ const config = require('./src/config')
 const app = express()
 
 app.use(cors({
-    origin: config.ORIGIN,
+    origin: 'https://real-time-chat.hadzikk.workers.dev',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }))
