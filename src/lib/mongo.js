@@ -6,12 +6,7 @@ let cachedConnection = null
 
 const mongodbConnect = async () => {
     if (cachedConnection) return cachedConnection
-
-    const options = {
-        bufferCommands: false,
-        connectTimeoutMS: 10000
-    }
-
+    const options = { bufferCommands: false, connectTimeoutMS: 10000 } 
     try {
         const connection = await mongoose.connect(MONGO_URI, options)
         console.log("Connected to MongoDB successfully")

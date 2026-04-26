@@ -77,6 +77,7 @@ const signOut = (req, res) => {
 }
 
 const checkAuth = async (req, res) => {
+    console.log(res.jwt)
     try {
         res.status(200).json(req.user)
     } catch (error) {
